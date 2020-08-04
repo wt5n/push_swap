@@ -203,7 +203,7 @@ int validation(int ac, char **av)
 	return (ok);
 }
 
-void transformation(const int ac, char **av)
+void transformation(const int ac, char **av, t_stack *numbs)
 {
 	int *buff;
 	char **buffer;
@@ -211,10 +211,10 @@ void transformation(const int ac, char **av)
 	int n_word;
 	int j;
 
-	j = -1;
 	i = 1;
 	while (i <= ac)
 	{
+		j = -1;
 		n_word = ft_words(av[i], ' ');
 		buffer = ft_strsplit_str(av[i], n_word);
 		if (!(buff = (int *)malloc(sizeof(int) * (n_word))))
@@ -225,15 +225,21 @@ void transformation(const int ac, char **av)
 			free(buffer[j]);
 		}
 		free(buffer);
-		printf("Nword: %d\n", n_word);
-		for (int a = 0; buff == EOF; a++)
-			printf("buff число: %d\n", buff[a]);
+		int a = -1;
+		while (n_word > ++a)
+		{
+			numbs->a[numbs->n + a] = buff[a];
+			printf("%d\n", numbs->a[a]);
+		}
+		numbs->n += n_word;
+		free(buff);
 		i++;
 	}
 }
 
 int main()
 {
+	t_stack *numbs;
 	int ac = 5;
 	char **av;
 	av[1] = "1 2";
@@ -243,9 +249,12 @@ int main()
 	av[5] = "7";
 	if(ac < 2)
 		exit(1);
+	if (!(numbs = (t_stack *)malloc(sizeof(t_stack))))
+		exit(1);
+	numbs->n = 0;
 	if(validation(ac, av))
 	{
-		transformation(ac, av);
+		transformation(ac, av, numbs);
 		printf("ok\n");
 	}
 	return 0;
