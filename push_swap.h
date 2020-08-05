@@ -19,5 +19,6 @@ void number_validation(char *av);
 int validation(int ac, char **av);
 int	ft_words(char const *s);
 void transformation(int ac, char **av, t_stack *numbs);
+void ft_error();
 
 #endif //UNTITLED_PUSH_SWAP_H
