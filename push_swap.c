@@ -41,30 +41,29 @@ int							ft_atoi(const char *str)
 	return ((int)r * sign);
 }
 
-int	ft_words(char const *s, char c)
+int	ft_words(char const *s)
 {
 	int		i;
 	int		words;
 	int		a;
 
-	i = 0;
+	i = -1;
 	words = 0;
 	a = 0;
-	while (s[i] != '\0')
+	while (s[++i] != '\0')
 	{
-		if (s[i] == c && a == 1)
-			a = 0;
-		if (s[i] != c && a == 0)
+		if ((s[i] != ' ' && s[i] != '\t') && a == 0)
 		{
 			a = 1;
 			words++;
 		}
-		i++;
+		if ((s[i] == ' ' || s[i] == '\t') && a == 1)
+			a = 0;
 	}
 	return (words);
 }
 
-static int		ft_wordmalloc(char const *s, char **mass)
+int		ft_wordmalloc(char const *s, char **mass)
 {
 	int lenword;
 	int i;
@@ -89,7 +88,7 @@ static int		ft_wordmalloc(char const *s, char **mass)
 	return (0);
 }
 
-static void	ft_rewriting(char const *s, char **mass)
+void	ft_rewriting(char const *s, char **mass)
 {
 	int i;
 	int j;
@@ -110,7 +109,7 @@ static void	ft_rewriting(char const *s, char **mass)
 	}
 }
 
-static char	**ft_strsplit_str(char const *s, int word)
+char	**ft_strsplit_str(char const *s, int word)
 {
 	char	**mass;
 	int		res;
@@ -166,20 +165,15 @@ void number_validation(char *av)
 		else if(av[i] == ' ' || av[i] == '\t')
 		{
 			if(num == 0 && sign != 0)
-			{
-				printf("Error\n");
-				exit(1);
-			}
+				ft_error();
 			num = 0;
 			sign = 0;
 		}
-		else if((av[i] == '+' || av[i] == '-') && (sign == 0 && num == 0) && (av[i + 1] != '\0'))
+		else if((av[i] == '+' || av[i] == '-') && (sign == 0 && num == 0) &&
+		(av[i + 1] != '\0'))
 			sign++;
 		else
-		{
-			printf("Error\n");
-			exit(1);
-		}
+			ft_error();
 		i++;
 	}
 }
@@ -235,6 +229,12 @@ void transformation(const int ac, char **av, t_stack *numbs)
 		free(buff);
 		i++;
 	}
+}
+
+void ft_error()
+{
+	ft_putstr("Error\n");
+	exit(1);
 }
 
 int main()
