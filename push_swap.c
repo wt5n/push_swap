@@ -71,42 +71,6 @@ char	**ft_strsplit_str(char const *s, int word)
 	return ((char **)mass);
 }
 
-
-void transformation(const int ac, char **av, t_stack *numbs)
-{
-	int *buff;
-	char **buffer;
-	int i;
-	int n_word;
-	int j;
-
-	i = 1;
-	while (i <= ac)
-	{
-		j = -1;
-		n_word = ft_words(av[i], ' ');
-		buffer = ft_strsplit_str(av[i], n_word);
-		if (!(buff = (int *)malloc(sizeof(int) * (n_word))))
-			exit(1);
-		while (n_word > ++j)
-		{
-			buff[j] = ft_atoi(buffer[j]);
-			free(buffer[j]);
-		}
-		free(buffer);
-		int a = -1;
-		while (n_word > ++a)
-		{
-			numbs->a[numbs->n + a] = buff[a];
-			printf("%d\n", numbs->a[a]);
-		}
-		numbs->n += n_word;
-		free(buff);
-		i++;
-	}
-}
-
-
 int main()
 {
 	t_stack *numbs;
@@ -122,10 +86,10 @@ int main()
 	if (!(numbs = (t_stack *)malloc(sizeof(t_stack))))
 		exit(1);
 	numbs->n = 0;
-	if(validation(ac, av))
+	if(validation(ac, av, numbs))
 	{
-		transformation(ac, av, numbs);
-		printf("ok\n");
+		initialization(stack, stacks);
+		sorting(stacks);
 	}
 	return 0;
 }

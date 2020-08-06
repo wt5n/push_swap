@@ -1,11 +1,11 @@
-#include "push_swap.h"
-int main(int ac, char **av)
+#include "./libft/libft.h"
+
+
+int main()
 {
-	int i = 1;
-	while (i < ac)
-	{
-		printf("%s, %d\n", av[i], i);
-		i++;
-	}
-	return 0;
+	char *s = "3 2 1";
+	int a[3] = {3, 2, 1};
+	char **t = ft_strsplit_str(s);
+	for(int i = 0; i < 3; i++)
+		printf("%c", *t[0]);
 }
