@@ -13,26 +13,25 @@
 #include <stdlib.h>
 #include "libft.h"
 
-int	ft_words(char const *s)
+static int	ft_count_words(char const *str, char c)
 {
-	int		i;
-	int		words;
-	int		a;
+	size_t	i;
+	size_t	res;
 
-	i = -1;
-	words = 0;
-	a = 0;
-	while (s[++i] != '\0')
+	i = 0;
+	res = 0;
+	while (str[i] != '\0')
 	{
-		if ((s[i] != ' ' && s[i] != '\t') && a == 0)
+		if (str[i] != c)
 		{
-			a = 1;
-			words++;
+			res++;
+			while (str[i] != c && str[i] != '\0')
+				i++;
 		}
-		if ((s[i] == ' ' || s[i] == '\t') && a == 1)
-			a = 0;
+		while (str[i] == c)
+			i++;
 	}
-	return (words);
+	return (res);
 }
 
 static int	ft_len(const char *s, char c)
@@ -72,7 +71,7 @@ char		**ft_strsplit(char const *s, char c)
 	i = 0;
 	if (!s || !c)
 		return (NULL);
-	nword = ft_words(s, c);
+	nword = ft_count_words(s, c);
 	if (!(t = (char **)malloc(sizeof(*t) * (nword + 1))))
 		return (NULL);
 	while (nword--)

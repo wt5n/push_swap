@@ -1,4 +1,4 @@
-#include "../inc/libft.h"
+#include "libft.h"
 
 int	ft_words(char const *s)
 {
@@ -27,7 +27,7 @@ static int	ft_len(const char *s)
 	int		len;
 
 	len = 0;
-	while (*s != ' ' || *s != '\t' && *s != '\0')
+	while ((*s != ' ' || *s != '\t') && *s != '\0')
 	{
 		len++;
 		s++;
