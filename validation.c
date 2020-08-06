@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-void number_validation(char *av)
+void number_validation(const char *av)
 {
 	int i;
 	int num;
@@ -29,7 +29,7 @@ void number_validation(char *av)
 	}
 }
 
-int spaces_check(char *av)
+int spaces_check(const char *av)
 {
 	int i;
 
@@ -44,7 +44,7 @@ int spaces_check(char *av)
 	return (0);
 }
 
-void check_dupl(t_stack numbs)
+void check_dupl(t_stack *numbs)
 {
 	int *buff;
 	int i;
@@ -52,7 +52,7 @@ void check_dupl(t_stack numbs)
 	i = 0;
 	if (!(buff = (int *)malloc(sizeof(int) * (numbs->n))))
 		exit(1);
-	buff = ft_stackcpy(buff, numbs);
+	buff = ft_intcpy(buff, numbs);
 	ft_quicksort(buff, 0, numbs->n-1);
 	while (i != numbs->n)
 		if (buff[i] == buff[i++])
@@ -71,8 +71,8 @@ void transformation(const int ac, char **av, t_stack *numbs)
 	while (i <= ac)
 	{
 		j = -1;
-		n_word = ft_words(av[i], ' ');
-		buffer = ft_strsplit_str(av[i], n_word);
+		n_word = ft_words(av[i]);
+		buffer = ft_strsplit_str(av[i]);
 		if (!(buff = (int *)malloc(sizeof(int) * (n_word))))
 			exit(1);
 		while (n_word > ++j)
@@ -93,7 +93,7 @@ void transformation(const int ac, char **av, t_stack *numbs)
 	}
 }
 
-int validation(int ac, char **av, t_stack numbs)
+int validation(int ac, char **av, t_stack *numbs)
 {
 	int i;
 	int ok;

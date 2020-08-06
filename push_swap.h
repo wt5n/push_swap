@@ -1,9 +1,6 @@
 #ifndef PUSH_SWAP_H
 #define PUSH_SWAP_H
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
 #include "./libft/libft.h"
 
 typedef struct	s_stack
@@ -19,14 +16,11 @@ typedef struct	s_stacks
 	int steps;
 }				t_stacks;
 
-
-
-int spaces_check(char *av);
-void number_validation(char *av);
-int validation(int ac, char **av, t_stack numbs);
-void check_dupl(t_stack numbs);
-int	ft_words(char const *s);
+int spaces_check(const char *av);
+void number_validation(const char *av);
+int validation(int ac, char **av, t_stack *numbs);
+void check_dupl(t_stack *numbs);
 void transformation(int ac, char **av, t_stack *numbs);
-void ft_error();
+int	*ft_intcpy(int *str1, const t_stack *str2);
 
-#endif //UNTITLED_PUSH_SWAP_H
+#endif
