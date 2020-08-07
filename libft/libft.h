@@ -95,7 +95,7 @@ char				*ft_strnstr(const char *big, const char *little,\
 size_t len);
 char				*ft_strrchr(const char *string, int symbol);
 char				**ft_strsplit(char const *s, char c);
-char				**ft_strsplit_str(char const *s);
+//char				**ft_strsplit_str(char const *s);
 char				*ft_strstr(const char *str1, const char *str2);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strtrim(char const *s);

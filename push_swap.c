@@ -1,86 +1,20 @@
 #include "push_swap.h"
+#include "./libft/libft.h"
 
-int		ft_wordmalloc(char const *s, char **mass)
+static void initialize(t_stack *numbs)
 {
-	int lenword;
-	int i;
-
-	i = 0;
-	while (*s)
-	{
-		lenword = 0;
-		if (*s != ' ' && *s != '\t')
-		{
-			while ((*s != ' ' && *s != '\t') && *s != '\0')
-			{
-				s++;
-				lenword++;
-			}
-			if (!(mass[i++] = ((char *)malloc(sizeof(char) * (lenword + 1)))))
-				return (i);
-		}
-		else
-			s++;
-	}
-	return (0);
-}
-
-void	ft_rewriting(char const *s, char **mass)
-{
-	int i;
-	int j;
-
-	i = 0;
-	j = 0;
-	while (*s)
-	{
-		if (*s != ' ' && *s != '\t')
-		{
-			while ((*s != ' ' && *s != '\t') && *s != '\0')
-				mass[i][j++] = *s++;
-			mass[i++][j] = '\0';
-		}
-		j = 0;
-		if (*s != '\0')
-			s++;
-	}
-}
-
-char	**ft_strsplit_str(char const *s, int word)
-{
-	char	**mass;
-	int		res;
-
-	if (!s)
-		return (NULL);
-	if (!(mass = (char **)malloc(sizeof(char *) * (word + 1))))
+	numbs->steps = 0;
+	numbs->unsorted = 0;
+	if (!(numbs->b = (int *)malloc(sizeof(numbs->a))))
 		exit(1);
-	mass[word] = NULL;
-	res = ft_wordmalloc(s, mass);
-	if (res == 0)
-		ft_rewriting(s, mass);
-	else
-	{
-		while (res != 0)
-		{
-			free(mass[res]);
-			mass[res--] = NULL;
-		}
-		free(mass);
-	}
-	return ((char **)mass);
 }
+
 
 int main()
 {
 	t_stack *numbs;
 	int ac = 5;
-	char **av;
-	av[1] = "1 2";
-	av[2] = "4";
-	av[3] = "5";
-	av[4] = "3";
-	av[5] = "7";
+	char *av[] = {"push_swap", "1 2 7", "4", "5", "3", "-1"};
 	if(ac < 2)
 		exit(1);
 	if (!(numbs = (t_stack *)malloc(sizeof(t_stack))))
@@ -88,8 +22,10 @@ int main()
 	numbs->n = 0;
 	if(validation(ac, av, numbs))
 	{
-		initialization(stack, stacks);
-		sorting(stacks);
+		initialize(numbs);
+		if(numbs->unsorted)
+			ft_sort(numbs);
 	}
+	free(numbs);
 	return 0;
 }
