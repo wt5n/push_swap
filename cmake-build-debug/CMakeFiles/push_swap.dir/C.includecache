@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/hlikely/CLionProjects/push_swap/mygit/libft/libft.h
+string.h
+-
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+fcntl.h
+-
+
+/Users/hlikely/CLionProjects/push_swap/mygit/push_swap.c
+push_swap.h
+/Users/hlikely/CLionProjects/push_swap/mygit/push_swap.h
+./libft/libft.h
+/Users/hlikely/CLionProjects/push_swap/mygit/libft/libft.h
+
+/Users/hlikely/CLionProjects/push_swap/mygit/push_swap.h
+./libft/libft.h
+/Users/hlikely/CLionProjects/push_swap/mygit/libft/libft.h
+

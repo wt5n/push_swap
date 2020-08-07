@@ -3,4 +3,4 @@ project(push_swap C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(push_swap push_swap.c ft_intcpy.c validation.c push_swap.h)
+add_executable(push_swap push_swap.c ft_intcpy.c operations.c validation.c push_swap.h)

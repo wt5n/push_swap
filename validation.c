@@ -277,7 +277,6 @@ void check_dupl(t_stack *numbs)
 	if (!(buff = (int *)malloc(sizeof(int) * (numbs->n))))
 		exit(1);
 	buff = ft_intcpy(buff, numbs->a, numbs->n);
-	numbs->stack_a = buff;
 	ft_quicksort(buff, 0, numbs->n-1);
 	while (i != numbs->n)
 	{
