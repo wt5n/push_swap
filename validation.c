@@ -47,60 +47,6 @@ void ft_error()
 	exit(1);
 }
 
-char	*ft_strncpy(char *dst, const char *src, size_t len)
-{
-	int	i;
-	int	len_src;
-
-	i = 0;
-	len_src = 0;
-	while (src[len_src] != '\0')
-		len_src++;
-	while (len_src && len)
-	{
-		dst[i] = src[i];
-		len_src--;
-		i++;
-		len--;
-	}
-	while (len)
-	{
-		dst[i] = '\0';
-		len--;
-		i++;
-	}
-	return (dst);
-}
-
-void	ft_bzero(void *buf, size_t count)
-{
-	unsigned char *pointer;
-
-	pointer = (unsigned char *)buf;
-	while (count-- > 0)
-		*(pointer++) = 0;
-}
-
-void	*ft_memalloc(size_t size)
-{
-	void *m;
-
-	if (!(m = malloc(size)))
-		return (NULL);
-	ft_bzero(m, size);
-	return (m);
-}
-
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
-{
-	char *r;
-
-	if (!s || !(r = ft_memalloc(len + 1)))
-		return (NULL);
-	r = ft_strncpy(r, (char *)s + start, len);
-	return (r);
-}
-
 void ft_swap(int *a, int *b)
 {
 	int c = *a;
@@ -253,12 +199,12 @@ void number_validation(const char *av)
 	}
 }
 
-int spaces_check(const char *av)
+int spaces_check(int ac, const char *av)
 {
 	int i;
 
 	i = 0;
-	while(av[i] != '\0')
+	while(i < ac)
 	{
 		if (av[i] == ' ' || av[i] == '\n' || av[i] == '\r' || av[i] == '\t' || av[i] == '\v' || av[i] == '\f')
 			i++;
@@ -268,7 +214,7 @@ int spaces_check(const char *av)
 	return (0);
 }
 
-void check_dupl(t_stack *numbs)
+void check_dupl(t_info *numbs)
 {
 	int *buff;
 	int i;
@@ -293,7 +239,7 @@ void check_dupl(t_stack *numbs)
 	}
 }
 
-void transformation(const int ac, char **av, t_stack *numbs)
+void transformation(const int ac, char **av, t_info *numbs)
 {
 	int *buff;
 	char **buffer;
@@ -302,7 +248,7 @@ void transformation(const int ac, char **av, t_stack *numbs)
 	int j;
 
 	i = 1;
-	while (i <= ac)
+	while (i < ac)
 	{
 		j = -1;
 		n_word = ft_words(av[i]);
@@ -324,16 +270,16 @@ void transformation(const int ac, char **av, t_stack *numbs)
 	}
 }
 
-int validation(int ac, char **av, t_stack *numbs)
+int validation(int ac, char **av, t_info *numbs)
 {
 	int i;
 	int ok;
 
 	i = 1;
 	ok = 0;
-	while (i <= ac)
+	while (i < ac)
 	{
-		if (spaces_check(av[i]))
+		if (spaces_check(ac, av[i]))
 		{
 			number_validation(av[i]);
 			ok = 1;
