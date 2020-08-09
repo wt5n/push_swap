@@ -78,13 +78,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/hlikely/CLionProjects/push_swap/mygit/checker.c">
+			<Option target="push_swap"/>
+		</Unit>
 		<Unit filename="/Users/hlikely/CLionProjects/push_swap/mygit/ft_intcpy.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/hlikely/CLionProjects/push_swap/mygit/operations.c">
+		<Unit filename="/Users/hlikely/CLionProjects/push_swap/mygit/libft/ft_strcmp.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/hlikely/CLionProjects/push_swap/mygit/push_swap.c">
+		<Unit filename="/Users/hlikely/CLionProjects/push_swap/mygit/libft/get_next_line.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/hlikely/CLionProjects/push_swap/mygit/operations.c">
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/hlikely/CLionProjects/push_swap/mygit/push_swap.h">

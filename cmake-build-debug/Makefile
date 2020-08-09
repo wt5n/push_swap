@@ -123,6 +123,33 @@ push_swap/fast:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/build
 .PHONY : push_swap/fast
 
+checker.o: checker.c.o
+
+.PHONY : checker.o
+
+# target to build an object file
+checker.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/checker.c.o
+.PHONY : checker.c.o
+
+checker.i: checker.c.i
+
+.PHONY : checker.i
+
+# target to preprocess a source file
+checker.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/checker.c.i
+.PHONY : checker.c.i
+
+checker.s: checker.c.s
+
+.PHONY : checker.s
+
+# target to generate assembly for a file
+checker.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/checker.c.s
+.PHONY : checker.c.s
+
 ft_intcpy.o: ft_intcpy.c.o
 
 .PHONY : ft_intcpy.o
@@ -150,6 +177,60 @@ ft_intcpy.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/ft_intcpy.c.s
 .PHONY : ft_intcpy.c.s
 
+libft/ft_strcmp.o: libft/ft_strcmp.c.o
+
+.PHONY : libft/ft_strcmp.o
+
+# target to build an object file
+libft/ft_strcmp.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/ft_strcmp.c.o
+.PHONY : libft/ft_strcmp.c.o
+
+libft/ft_strcmp.i: libft/ft_strcmp.c.i
+
+.PHONY : libft/ft_strcmp.i
+
+# target to preprocess a source file
+libft/ft_strcmp.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/ft_strcmp.c.i
+.PHONY : libft/ft_strcmp.c.i
+
+libft/ft_strcmp.s: libft/ft_strcmp.c.s
+
+.PHONY : libft/ft_strcmp.s
+
+# target to generate assembly for a file
+libft/ft_strcmp.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/ft_strcmp.c.s
+.PHONY : libft/ft_strcmp.c.s
+
+libft/get_next_line.o: libft/get_next_line.c.o
+
+.PHONY : libft/get_next_line.o
+
+# target to build an object file
+libft/get_next_line.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/get_next_line.c.o
+.PHONY : libft/get_next_line.c.o
+
+libft/get_next_line.i: libft/get_next_line.c.i
+
+.PHONY : libft/get_next_line.i
+
+# target to preprocess a source file
+libft/get_next_line.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/get_next_line.c.i
+.PHONY : libft/get_next_line.c.i
+
+libft/get_next_line.s: libft/get_next_line.c.s
+
+.PHONY : libft/get_next_line.s
+
+# target to generate assembly for a file
+libft/get_next_line.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/get_next_line.c.s
+.PHONY : libft/get_next_line.c.s
+
 operations.o: operations.c.o
 
 .PHONY : operations.o
@@ -176,33 +257,6 @@ operations.s: operations.c.s
 operations.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/operations.c.s
 .PHONY : operations.c.s
-
-push_swap.o: push_swap.c.o
-
-.PHONY : push_swap.o
-
-# target to build an object file
-push_swap.c.o:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap.c.o
-.PHONY : push_swap.c.o
-
-push_swap.i: push_swap.c.i
-
-.PHONY : push_swap.i
-
-# target to preprocess a source file
-push_swap.c.i:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap.c.i
-.PHONY : push_swap.c.i
-
-push_swap.s: push_swap.c.s
-
-.PHONY : push_swap.s
-
-# target to generate assembly for a file
-push_swap.c.s:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap.c.s
-.PHONY : push_swap.c.s
 
 validation.o: validation.c.o
 
@@ -240,15 +294,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... push_swap"
+	@echo "... checker.o"
+	@echo "... checker.i"
+	@echo "... checker.s"
 	@echo "... ft_intcpy.o"
 	@echo "... ft_intcpy.i"
 	@echo "... ft_intcpy.s"
+	@echo "... libft/ft_strcmp.o"
+	@echo "... libft/ft_strcmp.i"
+	@echo "... libft/ft_strcmp.s"
+	@echo "... libft/get_next_line.o"
+	@echo "... libft/get_next_line.i"
+	@echo "... libft/get_next_line.s"
 	@echo "... operations.o"
 	@echo "... operations.i"
 	@echo "... operations.s"
-	@echo "... push_swap.o"
-	@echo "... push_swap.i"
-	@echo "... push_swap.s"
 	@echo "... validation.o"
 	@echo "... validation.i"
 	@echo "... validation.s"
