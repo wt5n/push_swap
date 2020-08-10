@@ -48,7 +48,7 @@ void		initialize(t_info *numbs, t_stacks *res)
 	res->min = numbs->min;
 }
 
-void		to_info(t_info numbs, int *buff, int n_word)
+void		to_info(t_info *numbs, int *buff, int n_word)
 {
 	int		i;
 

@@ -6,7 +6,7 @@
 /*   By: hlikely <hlikely@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 16:08:24 by hlikely           #+#    #+#             */
-/*   Updated: 2020/08/10 17:01:58 by hlikely          ###   ########.fr       */
+/*   Updated: 2020/08/10 18:15:54 by hlikely          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <unistd.h>
 # include <fcntl.h>
 
+# define MAX 2147483647
+# define MIN -2147483647
 # define BUFF_SIZE	8
 # define FD_SIZE	10240
 

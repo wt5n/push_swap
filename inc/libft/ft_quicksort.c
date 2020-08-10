@@ -6,7 +6,7 @@
 /*   By: hlikely <hlikely@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 16:47:40 by hlikely           #+#    #+#             */
-/*   Updated: 2020/08/10 16:54:43 by hlikely          ###   ########.fr       */
+/*   Updated: 2020/08/10 18:09:05 by hlikely          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int	partition(int *str, int p, int q)
 {
-	int i;
-	int j;
+	int		i;
+	int		j;
 
 	i = p - 1;
 	j = p;
@@ -28,13 +28,13 @@ static int	partition(int *str, int p, int q)
 	return (i);
 }
 
-void 		ft_quicksort(int *str, int p, int q)
+void		ft_quicksort(int *str, int p, int q)
 {
+	int		pivot;
+
 	if (p < q)
 	{
-		int pivot;
-
-		pivot = partition(str, p, q)
+		pivot = partition(str, p, q);
 		ft_quicksort(str, p, pivot - 1);
 		ft_quicksort(str, pivot + 1, q);
 	}

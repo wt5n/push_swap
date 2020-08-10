@@ -6,7 +6,7 @@
 /*   By: hlikely <hlikely@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 16:38:40 by hlikely           #+#    #+#             */
-/*   Updated: 2020/08/10 17:30:07 by hlikely          ###   ########.fr       */
+/*   Updated: 2020/08/10 18:15:15 by hlikely          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,8 @@ void			transformation(const int ac, char **av, t_info *numbs)
 		while (n_word > ++j)
 		{
 			buff[j] = ft_atoi(buffer[j]);
+			if (buff[j] >= MAX || buff[j] <= MIN)
+				ft_error();
 			free(buffer[j]);
 		}
 		free(buffer);

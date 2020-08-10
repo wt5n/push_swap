@@ -52,7 +52,7 @@ typedef struct		s_stacks
 int					spaces_check(int ac, const char *av);
 t_stack				*init_stack(const int *stack, int n);
 void				initialize(t_info *numbs, t_stacks *res);
-void				to_info(t_info numbs, int *buff, int n_word);
+void				to_info(t_info *numbs, int *buff, int n_word);
 void				number_validation(const char *av);
 int					validation(int ac, char **av, t_info *numbs);
 void				check_duplicate(t_info *numbs);
