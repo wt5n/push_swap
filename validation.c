@@ -1,4 +1,5 @@
 #include "push_swap.h"
+#include "./libft/libft.h"
 
 static unsigned long long	max_min(char *s, int sign)
 {
@@ -214,7 +215,7 @@ int spaces_check(int ac, const char *av)
 	return (0);
 }
 
-void check_dupl(t_info *numbs)
+void check_duplicate(t_info *numbs)
 {
 	int *buff;
 	int i;
@@ -237,6 +238,10 @@ void check_dupl(t_info *numbs)
 			numbs->unsorted = 1;
 		i++;
 	}
+	numbs->max = buff[numbs->n - 1];
+	numbs->min = buff[0];
+	numbs->med = buff[numbs->n/2];
+	free(buff);
 }
 
 void transformation(const int ac, char **av, t_info *numbs)
@@ -289,7 +294,7 @@ int validation(int ac, char **av, t_info *numbs)
 	if (ok)
 	{
 		transformation(ac, av, numbs);
-		check_dupl(numbs);
+		check_duplicate(numbs);
 	}
 	return (ok);
 }

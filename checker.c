@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   checker.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hlikely <hlikely@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/08/10 13:13:43 by hlikely           #+#    #+#             */
+/*   Updated: 2020/08/10 14:27:41 by hlikely          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 #include "./libft/libft.h"
 
@@ -32,8 +44,6 @@ static void initialize(t_info *numbs, t_stacks *res)
 	res->a = init_stack(numbs->a, numbs->n);
 	res->len_a = numbs->n;
 	res->len_b = 0;
-	res->max = numbs->a[numbs->n - 1];
-	res->min = numbs->a[0];
 	res->print_comm = 0;
 }
 

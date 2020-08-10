@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/hlikely/CLionProjects/push_swap/mygit/libft/get_next_line.c
-libft.h
-/Users/hlikely/CLionProjects/push_swap/mygit/libft/libft.h
-
 /Users/hlikely/CLionProjects/push_swap/mygit/libft/libft.h
 string.h
 -
@@ -21,4 +17,26 @@ unistd.h
 -
 fcntl.h
 -
+
+/Users/hlikely/CLionProjects/push_swap/mygit/operations.c
+push_swap.h
+/Users/hlikely/CLionProjects/push_swap/mygit/push_swap.h
+
+/Users/hlikely/CLionProjects/push_swap/mygit/push_swap.c
+push_swap.h
+/Users/hlikely/CLionProjects/push_swap/mygit/push_swap.h
+
+/Users/hlikely/CLionProjects/push_swap/mygit/push_swap.h
+./libft/libft.h
+/Users/hlikely/CLionProjects/push_swap/mygit/libft/libft.h
+
+/Users/hlikely/CLionProjects/push_swap/mygit/sorting.c
+push_swap.h
+/Users/hlikely/CLionProjects/push_swap/mygit/push_swap.h
+
+/Users/hlikely/CLionProjects/push_swap/mygit/validation.c
+push_swap.h
+/Users/hlikely/CLionProjects/push_swap/mygit/push_swap.h
+./libft/libft.h
+/Users/hlikely/CLionProjects/push_swap/mygit/libft/libft.h
 

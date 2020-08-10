@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debu
 
 # The main recursive "all" target.
 all: CMakeFiles/push_swap.dir/all
+all: CMakeFiles/checker.dir/all
 
 .PHONY : all
 
@@ -64,6 +65,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/push_swap.dir/clean
+clean: CMakeFiles/checker.dir/clean
 
 .PHONY : clean
 
@@ -74,12 +76,12 @@ clean: CMakeFiles/push_swap.dir/clean
 CMakeFiles/push_swap.dir/all:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/depend
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target push_swap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug/CMakeFiles --progress-num=5,6,7,8,9 "Built target push_swap"
 .PHONY : CMakeFiles/push_swap.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/push_swap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/push_swap.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/push_swap.dir/rule
@@ -93,6 +95,33 @@ push_swap: CMakeFiles/push_swap.dir/rule
 CMakeFiles/push_swap.dir/clean:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/clean
 .PHONY : CMakeFiles/push_swap.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/checker.dir
+
+# All Build rule for target.
+CMakeFiles/checker.dir/all:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/depend
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target checker"
+.PHONY : CMakeFiles/checker.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/checker.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/checker.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/checker.dir/rule
+
+# Convenience name for target.
+checker: CMakeFiles/checker.dir/rule
+
+.PHONY : checker
+
+# clean rule for target.
+CMakeFiles/checker.dir/clean:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/clean
+.PHONY : CMakeFiles/checker.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

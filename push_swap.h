@@ -8,12 +8,16 @@ typedef struct	s_info
     int a[5000];
     int n;
 	int unsorted;
+	int max;
+	int min;
+	int med;
 }               t_info;
 
 typedef struct s_stack
 {
 	int value;
 	int step;
+	int rotate;
 	struct s_stack *next;
 }				t_stack;
 
@@ -25,15 +29,19 @@ typedef struct s_stacks
 	int len_b;
 	int max;
 	int min;
+	int med;
 	int print_comm;
+	int slen_a;
+	int slen_b;
+	int dest_a;
+	int dest_b;
 }				t_stacks;
 
 int 			spaces_check(int ac, const char *av);
 void 			number_validation(const char *av);
 int 			validation(int ac, char **av, t_info *numbs);
-void 			check_dupl(t_info *numbs);
+void 			check_duplicate(t_info *numbs);
 void 			transformation(int ac, char **av, t_info *numbs);
-int				*ft_intcpy(int *str1, int *str2, int n);
 void			ft_sa(t_stack *a, int print_comm);
 void			ft_sb(t_stack *a, int print_comm);
 void			ft_ss(t_stacks *res, int print_comm);
@@ -45,6 +53,12 @@ void 			ft_rrb(t_stack **a, int print_comm);
 void 			ft_rrr(t_stacks *res, int print_comm);
 void 			ft_pa(t_stacks *res, int print_comm);
 void 			ft_pb(t_stacks *res, int print_comm);
+void			ft_sorting(t_stacks *res);
+void			ft_instruction_execution(t_stacks *res, t_stacks *steps);
+void			ft_start_sort(t_stacks *res);
+void			ft_minimum_insertion_steps(t_stacks *res, t_stacks *steps);
+void			ft_steps_markup(t_stack *b, int count);
+int				ft_smaller_element_detection(t_stack *a, int buff, int src);
 
 
 #endif

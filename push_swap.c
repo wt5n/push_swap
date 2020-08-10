@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hlikely <hlikely@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/08/10 13:14:45 by hlikely           #+#    #+#             */
+/*   Updated: 2020/08/10 14:27:41 by hlikely          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 t_stack	*init_stack(const int *stack, int n)
@@ -31,14 +43,10 @@ static void initialize(t_info *numbs, t_stacks *res)
 	res->a = init_stack(numbs->a, numbs->n);
 	res->len_a = numbs->n;
 	res->len_b = 0;
-	res->max = numbs->a[numbs->n - 1];
-	res->min = numbs->a[0];
+	res->max = numbs->max;
+	res->med = numbs->med;
+	res->min = numbs->min;
 	res->print_comm = 1;
-}
-
-void ft_sorting(t_stacks *res)
-{
-	printf("ok\n");
 }
 
 int		ft_max(t_stack *s)

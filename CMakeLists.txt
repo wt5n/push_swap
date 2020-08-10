@@ -3,4 +3,6 @@ project(push_swap C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(push_swap ft_intcpy.c ./libft/get_next_line.c ./libft/ft_strcmp.c operations.c checker.c validation.c push_swap.h)
+add_executable(checker operations.c checker.c validation.c ./libft/libft.h push_swap.h)
+
+add_executable(push_swap operations.c push_swap.c validation.c sorting.c ./libft/libft.h push_swap.h)

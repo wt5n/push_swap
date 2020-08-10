@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/push_swap.dir/checker.c.o"
-  "CMakeFiles/push_swap.dir/ft_intcpy.c.o"
-  "CMakeFiles/push_swap.dir/libft/ft_strcmp.c.o"
-  "CMakeFiles/push_swap.dir/libft/get_next_line.c.o"
   "CMakeFiles/push_swap.dir/operations.c.o"
+  "CMakeFiles/push_swap.dir/push_swap.c.o"
+  "CMakeFiles/push_swap.dir/sorting.c.o"
   "CMakeFiles/push_swap.dir/validation.c.o"
   "push_swap"
   "push_swap.pdb"
