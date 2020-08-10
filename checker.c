@@ -6,50 +6,15 @@
 /*   By: hlikely <hlikely@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 13:13:43 by hlikely           #+#    #+#             */
-/*   Updated: 2020/08/10 14:27:41 by hlikely          ###   ########.fr       */
+/*   Updated: 2020/08/10 17:19:48 by hlikely          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include "./libft/libft.h"
+#include "./inc/push_swap.h"
 
-t_stack	*init_stack(const int *stack, int n)
+int				ft_max(t_stack *s)
 {
-	t_stack *a;
-	t_stack *b;
-	int i;
-
-	i = 0;
-	if (!(a = (t_stack *)malloc(sizeof(t_stack))))
-		exit(1);
-	b = a;
-	while (i < n)
-	{
-		if (i < n -1)
-			if(!(a->next = (t_stack *)malloc(sizeof(t_stack))))
-				exit(1);
-		a->value = stack[i];
-		if(i == (n - 1))
-			a->next = NULL;
-		else
-			a = a->next;
-		i++;
-	}
-	return (b);
-}
-
-static void initialize(t_info *numbs, t_stacks *res)
-{
-	res->b = NULL;
-	res->a = init_stack(numbs->a, numbs->n);
-	res->len_a = numbs->n;
-	res->len_b = 0;
-	res->print_comm = 0;
-}
-
-int		ft_max(t_stack *s)
-{
-	int max;
+	int			max;
 
 	max = s->value;
 	while (s)
@@ -61,7 +26,7 @@ int		ft_max(t_stack *s)
 	return (max);
 }
 
-void	actions(char *line, t_stacks *res)
+void			actions(char *line, t_stacks *res)
 {
 	if (ft_strcmp(line, "sa") == 0)
 		ft_sa(res->a, 0);
@@ -89,14 +54,14 @@ void	actions(char *line, t_stacks *res)
 		ft_error();
 }
 
-void	read_line(t_stacks *res)
+void			read_line(t_stacks *res)
 {
-	char *str;
+	char		*str;
 
 	str = NULL;
 	while (get_next_line(0, &str))
 	{
-		actions(str,res);
+		actions(str, res);
 		free(str);
 		str = NULL;
 	}
@@ -107,11 +72,11 @@ void	read_line(t_stacks *res)
 	}
 }
 
-int stack_sort(t_stacks *res)
+int				stack_sort(t_stacks *res)
 {
-	int i;
-	t_stack *s;
-	int buff;
+	int			i;
+	t_stack		*s;
+	int			buff;
 
 	i = 0;
 	s = res->a;
@@ -130,19 +95,21 @@ int stack_sort(t_stacks *res)
 	return (1);
 }
 
-int main(int ac, char **av)
+int				main(int ac, char **av)
 {
-	t_info *numbs;
-	t_stacks *res;
-	if(ac < 2)
+	t_info		*numbs;
+	t_stacks	*res;
+
+	if (ac < 2)
 		exit(1);
 	if (!(numbs = (t_info *)malloc(sizeof(t_info))))
 		exit(1);
 	if (!(res = (t_stacks *)malloc(sizeof(t_stacks))))
 		exit(1);
-	if(validation(ac, av, numbs)) // проверка на пустой аргумент, цифры/буквы, дубликаты. Сохраняем готовый массив из чисел в общую структуру
+	if (validation(ac, av, numbs))
 	{
-		initialize(numbs, res); // перевод из общего массива после проверок к листам
+		res->print_comm = 0;
+		initialize(numbs, res);
 		read_line(res);
 		if (stack_sort(res) && res->len_b == 0)
 			write(1, "OK\n", 3);
@@ -151,5 +118,5 @@ int main(int ac, char **av)
 	}
 	free(numbs);
 	free(res);
-	return 0;
+	return (0);
 }

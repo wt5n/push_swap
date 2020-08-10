@@ -37,7 +37,7 @@ static int		read_file(char **st, const int fd)
 	return (1);
 }
 
-static void			last_4str(char **line, const int fd, char **st, char *tmp)
+static void		last_4str(char **line, const int fd, char **st, char *tmp)
 {
 	*line = ft_strdup(st[fd]);
 	free(st[fd]);

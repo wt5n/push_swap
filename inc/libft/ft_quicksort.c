@@ -1,25 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intcpy.c                                        :+:      :+:    :+:   */
+/*   ft_quicksort.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlikely <hlikely@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/10 16:07:49 by hlikely           #+#    #+#             */
-/*   Updated: 2020/08/10 16:14:21 by hlikely          ###   ########.fr       */
+/*   Created: 2020/08/10 16:47:40 by hlikely           #+#    #+#             */
+/*   Updated: 2020/08/10 16:54:43 by hlikely          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	*ft_intcpy(int *str1, int *str2, int n)
-{
-	unsigned int i;
+#include "libft.h"
 
-	i = 0;
-	while (i < n)
+static int	partition(int *str, int p, int q)
+{
+	int i;
+	int j;
+
+	i = p - 1;
+	j = p;
+	while (j <= q)
 	{
-		str1[i] = str2[i];
-		i++;
+		if (str[j] <= str[q])
+			ft_swap(&str[++i], &str[j]);
+		j++;
 	}
-	str1[i] = str2[i];
-	return (str1);
+	return (i);
+}
+
+void 		ft_quicksort(int *str, int p, int q)
+{
+	if (p < q)
+	{
+		int pivot;
+
+		pivot = partition(str, p, q)
+		ft_quicksort(str, p, pivot - 1);
+		ft_quicksort(str, pivot + 1, q);
+	}
 }

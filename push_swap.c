@@ -6,48 +6,11 @@
 /*   By: hlikely <hlikely@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 13:14:45 by hlikely           #+#    #+#             */
-/*   Updated: 2020/08/10 14:27:41 by hlikely          ###   ########.fr       */
+/*   Updated: 2020/08/10 17:14:17 by hlikely          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-t_stack	*init_stack(const int *stack, int n)
-{
-	t_stack *a;
-	t_stack *b;
-	int i;
-
-	i = 0;
-	if (!(a = (t_stack *)malloc(sizeof(t_stack))))
-		exit(1);
-	b = a;
-	while (i < n)
-	{
-		if (i < n -1)
-			if(!(a->next = (t_stack *)malloc(sizeof(t_stack))))
-				exit(1);
-		a->value = stack[i];
-		if(i == (n - 1))
-			a->next = NULL;
-		else
-			a = a->next;
-		i++;
-	}
-	return (b);
-}
-
-static void initialize(t_info *numbs, t_stacks *res)
-{
-	res->b = NULL;
-	res->a = init_stack(numbs->a, numbs->n);
-	res->len_a = numbs->n;
-	res->len_b = 0;
-	res->max = numbs->max;
-	res->med = numbs->med;
-	res->min = numbs->min;
-	res->print_comm = 1;
-}
+#include "./inc/push_swap.h"
 
 int		ft_max(t_stack *s)
 {
@@ -83,7 +46,7 @@ void	sort_3(t_stacks *res)
 void	sort_5(t_stacks *res)
 {
 	while (res->len_b < 2)
-		(res->a->value == res->min || res->a->value == res->max)? \
+		(res->a->value == res->min || res->a->value == res->max) ? \
 		ft_pb(res, res->print_comm) : ft_ra(&res->a, res->print_comm);
 	sort_3(res);
 	ft_pa(res, res->print_comm);
@@ -97,7 +60,7 @@ void	sort_5(t_stacks *res)
 	}
 }
 
-void ft_sort(t_stacks *res)
+void	ft_sort(t_stacks *res)
 {
 	if (res->len_a == 1)
 		return ;
@@ -109,23 +72,25 @@ void ft_sort(t_stacks *res)
 		ft_sorting(res);
 }
 
-int main(int ac, char **av)
+int		main(int ac, char **av)
 {
-	t_info *numbs;
-	t_stacks *res;
-	if(ac < 2)
+	t_info		*numbs;
+	t_stacks	*res;
+
+	if (ac < 2)
 		exit(1);
 	if (!(numbs = (t_info *)malloc(sizeof(t_info))))
 		exit(1);
 	if (!(res = (t_stacks *)malloc(sizeof(t_stacks))))
 		exit(1);
-	if(validation(ac, av, numbs)) // проверка на пустой аргумент, цифры/буквы, дубликаты. Сохраняем готовый массив из чисел в общую структуру
+	if (validation(ac, av, numbs))
 	{
-		initialize(numbs, res); // перевод из общего массива после проверок к листам
-		if(numbs->unsorted == 1) // Если не отсортирован, отправляем на сортировку
-			ft_sort(res); // вывод команд для сортировки
+		res->print_comm = 1;
+		initialize(numbs, res);
+		if (numbs->unsorted == 1)
+			ft_sort(res);
 	}
 	free(numbs);
 	free(res);
-	return 0;
+	return (0);
 }
