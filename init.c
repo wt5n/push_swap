@@ -6,7 +6,7 @@
 /*   By: hlikely <hlikely@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 17:11:19 by hlikely           #+#    #+#             */
-/*   Updated: 2020/08/10 17:33:09 by hlikely          ###   ########.fr       */
+/*   Updated: 2020/08/10 18:31:14 by hlikely          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,27 @@ void		ft_rrr(t_stacks *res, int print_comm)
 	ft_rrb(&res->b, 0);
 	if (print_comm)
 		write(1, "rrr\n", 4);
+}
+
+void	ft_free_stack(t_stacks *stacks)
+{
+	int		i;
+	t_stack	*buff;
+
+	i = 0;
+	while (i < stacks->len_a)
+	{
+		buff = stacks->a;
+		stacks->a = stacks->a->next;
+		free(buff);
+		i++;
+	}
+	i = 0;
+	while (i < stacks->len_b)
+	{
+		buff = stacks->b;
+		stacks->b = stacks->b->next;
+		free(buff);
+		i++;
+	}
 }

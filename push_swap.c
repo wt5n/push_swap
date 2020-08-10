@@ -90,6 +90,7 @@ int		main(int ac, char **av)
 		if (numbs->unsorted == 1)
 			ft_sort(res);
 	}
+	ft_free_stack(res);
 	free(numbs);
 	free(res);
 	return (0);

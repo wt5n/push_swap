@@ -6,7 +6,7 @@
 /*   By: hlikely <hlikely@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 17:06:18 by hlikely           #+#    #+#             */
-/*   Updated: 2020/08/10 17:43:45 by hlikely          ###   ########.fr       */
+/*   Updated: 2020/08/10 17:52:28 by hlikely          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,5 +77,6 @@ int					ft_smaller_element_detection(t_stack *a, int buff, int src);
 void				ft_help_finding_place(t_stacks *s, t_stack *b, int *action, int *buff);
 int					ft_finding_place(t_stacks *s, t_stack *b, t_stacks *steps, int min);
 int					ft_count_to_min(t_stack *a, int min);
+void				ft_free_stack(t_stacks *stacks);
 
 #endif
