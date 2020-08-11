@@ -6,14 +6,14 @@
 /*   By: hlikely <hlikely@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 17:06:18 by hlikely           #+#    #+#             */
-/*   Updated: 2020/08/10 17:52:28 by hlikely          ###   ########.fr       */
+/*   Updated: 2020/08/11 17:03:57 by hlikely          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "./libft/libft.h"
+# include "../libft/libft.h"
 
 typedef struct		s_info
 {
@@ -69,14 +69,14 @@ void				ft_rrr(t_stacks *res, int print_comm);
 void				ft_pa(t_stacks *res, int print_comm);
 void				ft_pb(t_stacks *res, int print_comm);
 void				ft_sorting(t_stacks *res);
-void				ft_instruction_execution(t_stacks *res, t_stacks *steps);
-void				ft_start_sort(t_stacks *res);
-void				ft_minimum_insertion_steps(t_stacks *res, t_stacks *steps);
-void				ft_steps_markup(t_stack *b, int count);
-int					ft_smaller_element_detection(t_stack *a, int buff, int src);
-void				ft_help_finding_place(t_stacks *s, t_stack *b, int *action, int *buff);
-int					ft_finding_place(t_stacks *s, t_stack *b, t_stacks *steps, int min);
+void				change_stacks(t_stacks *res, t_stacks *steps);
+void				start_sort(t_stacks *res);
+void				min_steps(t_stacks *res, t_stacks *steps);
+void				steps_markup(t_stack *b, int count);
+int					min_elem(t_stack *a, int buff, int src);
+void				best_pos_c(t_stacks *s, t_stack *b, int *act, int *buff);
+int					best_pos(t_stacks *s, t_stack *b, t_stacks *steps, int min);
 int					ft_count_to_min(t_stack *a, int min);
-void				ft_free_stack(t_stacks *stacks);
+void				free_stack(t_stacks *stacks);
 
 #endif

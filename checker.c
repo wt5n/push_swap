@@ -12,20 +12,6 @@
 
 #include "./inc/push_swap.h"
 
-int				ft_max(t_stack *s)
-{
-	int			max;
-
-	max = s->value;
-	while (s)
-	{
-		if (s->value > max)
-			max = s->value;
-		s = s->next;
-	}
-	return (max);
-}
-
 void			actions(char *line, t_stacks *res)
 {
 	if (ft_strcmp(line, "sa") == 0)
@@ -116,7 +102,7 @@ int				main(int ac, char **av)
 		else
 			write(1, "KO\n", 3);
 	}
-	ft_free_stack(res);
+	free_stack(res);
 	free(numbs);
 	free(res);
 	return (0);

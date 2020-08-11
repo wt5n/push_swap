@@ -28,10 +28,10 @@ void	ft_sorting(t_stacks *res)
 	if (res->a->value < res->a->next->value)
 		ft_sa(res->a, 1);
 	ft_pa(res, 1);
-	ft_start_sort(res);
+	start_sort(res);
 }
 
-void	ft_start_sort(t_stacks *res)
+void	start_sort(t_stacks *res)
 {
 	t_stacks *step;
 
@@ -43,10 +43,10 @@ void	ft_start_sort(t_stacks *res)
 		step->slen_b = -1;
 		step->dest_a = 0;
 		step->dest_b = 0;
-		ft_steps_markup(res->a, res->len_a);
-		ft_steps_markup(res->b, res->len_b);
-		ft_minimum_insertion_steps(res, step);
-		ft_instruction_execution(res, step);
+		steps_markup(res->a, res->len_a);
+		steps_markup(res->b, res->len_b);
+		min_steps(res, step);
+		change_stacks(res, step);
 	}
 	if ((ft_count_to_min(res->a, res->min)) > res->len_a / 2)
 	{
@@ -59,7 +59,7 @@ void	ft_start_sort(t_stacks *res)
 	free(step);
 }
 
-void	ft_steps_markup(t_stack *b, int count)
+void	steps_markup(t_stack *b, int count)
 {
 	int		i;
 	int		iter;
@@ -84,7 +84,7 @@ void	ft_steps_markup(t_stack *b, int count)
 	}
 }
 
-void	ft_minimum_insertion_steps(t_stacks *res, t_stacks *steps)
+void	min_steps(t_stacks *res, t_stacks *steps)
 {
 	int		min_action;
 	t_stack	*first_a;
@@ -95,14 +95,14 @@ void	ft_minimum_insertion_steps(t_stacks *res, t_stacks *steps)
 	first_b = res->b;
 	while (res->b)
 	{
-		min_action = ft_finding_place(res, res->b, steps, min_action);
+		min_action = best_pos(res, res->b, steps, min_action);
 		res->a = first_a;
 		res->b = res->b->next;
 	}
 	res->b = first_b;
 }
 
-void	ft_instruction_execution(t_stacks *res, t_stacks *steps)
+void	change_stacks(t_stacks *res, t_stacks *steps)
 {
 	while (steps->slen_a > 0)
 	{

@@ -1,0 +1,7 @@
+/Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug/CMakeFiles/checker.dir
+/Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug/CMakeFiles/push_swap.dir
+/Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug/libft/CMakeFiles/rebuild_cache.dir
+/Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug/libft/CMakeFiles/edit_cache.dir
+/Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug/libft/CMakeFiles/libft.dir

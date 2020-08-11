@@ -16,20 +16,19 @@ OBJS2 	= $(addprefix $(OBJSFD)/,$(SRC2:.c=.o))
 
 HDR 		= -I./inc
 
-LIBFT_HDR 	= -I./inc/libft
+LIBFT_HDR 	= -I./libft
 
-LIB_BINARY	= -L./inc/libft -lft
+LIB_BINARY	= -L./libft -lft
 
-LIBFT		= ./inc/libft/libft.a
+LIBFT		= ./libft/libft.a
 
-all: $(LIBFT) ./inc/libft/libft.a $(NAME1) $(NAME2)
+all: $(LIBFT) ./libft/libft.a $(NAME1) $(NAME2)
 
-FORCE:		;
 
-LIBFT		= ./inc/libft/libft.a
+LIBFT		= ./libft/libft.a
 
-$(LIBFT):	FORCE
-			make -C ./inc/libft
+$(LIBFT):
+			make -C ./libft
 
 $(OBJSFD):
 	mkdir $@
@@ -46,11 +45,11 @@ $(NAME2): $(OBJS2) $(LIBFT) ./inc/push_swap.h
 clean:
 	/bin/rm -f $(OBJS)
 	rm -rf $(OBJSFD)
-	make -C ./inc/libft clean
+	make -C ./libft clean
 
 fclean: clean
 	/bin/rm -f $(NAME1)
 	/bin/rm -f $(NAME2)
-	make -C ./inc/libft fclean
+	make -C ./libft fclean
 
 re: fclean all

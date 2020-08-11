@@ -67,7 +67,7 @@ void		ft_rrr(t_stacks *res, int print_comm)
 		write(1, "rrr\n", 4);
 }
 
-void		ft_free_stack(t_stacks *stacks)
+void		free_stack(t_stacks *stacks)
 {
 	int		i;
 	t_stack	*buff;

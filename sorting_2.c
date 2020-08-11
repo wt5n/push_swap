@@ -6,20 +6,20 @@
 /*   By: hlikely <hlikely@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 17:40:04 by hlikely           #+#    #+#             */
-/*   Updated: 2020/08/10 17:40:04 by hlikely          ###   ########.fr       */
+/*   Updated: 2020/08/11 17:04:22 by hlikely          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./inc/push_swap.h"
 
-void	ft_help_finding_place(t_stacks *s, t_stack *b, int *action, int *buff)
+void	best_pos_c(t_stacks *s, t_stack *b, int *act, int *buff)
 {
 	while (s->a)
 	{
 		*buff = s->a->value;
 		if (b->value > s->a->value)
 		{
-			*action += 1;
+			*act += 1;
 			if (b->value < s->a->next->value)
 				break ;
 			s->a = s->a->next;
@@ -27,19 +27,19 @@ void	ft_help_finding_place(t_stacks *s, t_stack *b, int *action, int *buff)
 		else
 			break ;
 	}
-	if (ft_smaller_element_detection(s->a, *buff, b->value) == 1)
+	if (min_elem(s->a, *buff, b->value) == 1)
 	{
 		while (s->a)
 		{
 			if (s->a->value < *buff && s->a->value > b->value)
 				break ;
-			*action += 1;
+			*act += 1;
 			s->a = s->a->next;
 		}
 	}
 }
 
-int		ft_finding_place(t_stacks *s, t_stack *b, t_stacks *steps, int min)
+int		best_pos(t_stacks *s, t_stack *b, t_stacks *steps, int min)
 {
 	int action;
 	int res;
@@ -47,7 +47,7 @@ int		ft_finding_place(t_stacks *s, t_stack *b, t_stacks *steps, int min)
 
 	action = 0;
 	buff = 0;
-	ft_help_finding_place(s, b, &action, &buff);
+	best_pos_c(s, b, &action, &buff);
 	if (s->a->rotate == -1)
 		action = s->len_a - action;
 	if (min == -1 || (action + b->step) < min)
@@ -63,7 +63,7 @@ int		ft_finding_place(t_stacks *s, t_stack *b, t_stacks *steps, int min)
 	return (res);
 }
 
-int		ft_smaller_element_detection(t_stack *a, int buff, int src)
+int		min_elem(t_stack *a, int buff, int src)
 {
 	t_stack	*save;
 	int		ret;
