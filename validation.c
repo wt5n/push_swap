@@ -70,10 +70,7 @@ void			check_duplicate(t_info *numbs)
 	while (i != numbs->n)
 	{
 		if (buff[i] == buff[i + 1])
-		{
-			free(buff);
 			ft_error();
-		}
 		i++;
 	}
 	i = 0;
