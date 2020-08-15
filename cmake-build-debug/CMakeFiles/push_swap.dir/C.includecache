@@ -10,6 +10,10 @@
 ../libft/libft.h
 /Users/hlikely/CLionProjects/push_swap/mygit/libft/libft.h
 
+/Users/hlikely/CLionProjects/push_swap/mygit/init.c
+./inc/push_swap.h
+/Users/hlikely/CLionProjects/push_swap/mygit/inc/push_swap.h
+
 /Users/hlikely/CLionProjects/push_swap/mygit/libft/libft.h
 string.h
 -
@@ -21,6 +25,26 @@ unistd.h
 -
 fcntl.h
 -
+
+/Users/hlikely/CLionProjects/push_swap/mygit/operations.c
+./inc/push_swap.h
+/Users/hlikely/CLionProjects/push_swap/mygit/inc/push_swap.h
+
+/Users/hlikely/CLionProjects/push_swap/mygit/operations_2.c
+./inc/push_swap.h
+/Users/hlikely/CLionProjects/push_swap/mygit/inc/push_swap.h
+
+/Users/hlikely/CLionProjects/push_swap/mygit/push_swap.c
+./inc/push_swap.h
+/Users/hlikely/CLionProjects/push_swap/mygit/inc/push_swap.h
+
+/Users/hlikely/CLionProjects/push_swap/mygit/sorting.c
+./inc/push_swap.h
+/Users/hlikely/CLionProjects/push_swap/mygit/inc/push_swap.h
+
+/Users/hlikely/CLionProjects/push_swap/mygit/sorting_2.c
+./inc/push_swap.h
+/Users/hlikely/CLionProjects/push_swap/mygit/inc/push_swap.h
 
 /Users/hlikely/CLionProjects/push_swap/mygit/validation.c
 ./inc/push_swap.h

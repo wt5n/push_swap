@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 /Users/hlikely/CLionProjects/push_swap/mygit/libft/ft_atoi.c
+libft.h
+/Users/hlikely/CLionProjects/push_swap/mygit/libft/libft.h
 
 /Users/hlikely/CLionProjects/push_swap/mygit/libft/ft_bzero.c
 libft.h
@@ -15,8 +17,6 @@ libft.h
 /Users/hlikely/CLionProjects/push_swap/mygit/libft/ft_error.c
 libft.h
 /Users/hlikely/CLionProjects/push_swap/mygit/libft/libft.h
-
-/Users/hlikely/CLionProjects/push_swap/mygit/libft/ft_intcpy.c
 
 /Users/hlikely/CLionProjects/push_swap/mygit/libft/ft_memalloc.c
 libft.h
@@ -59,8 +59,6 @@ stdlib.h
 /Users/hlikely/CLionProjects/push_swap/mygit/libft/ft_strsplit.c
 libft.h
 /Users/hlikely/CLionProjects/push_swap/mygit/libft/libft.h
-
-/Users/hlikely/CLionProjects/push_swap/mygit/libft/ft_swap.c
 
 /Users/hlikely/CLionProjects/push_swap/mygit/libft/get_next_line.c
 libft.h

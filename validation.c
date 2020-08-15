@@ -6,7 +6,7 @@
 /*   By: hlikely <hlikely@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 16:38:40 by hlikely           #+#    #+#             */
-/*   Updated: 2020/08/10 18:15:15 by hlikely          ###   ########.fr       */
+/*   Updated: 2020/08/15 21:08:08 by hlikely          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void			check_duplicate(t_info *numbs)
 	int			i;
 
 	i = 0;
-	if (!(buff = (int *)malloc(sizeof(int) * (numbs->n))))
+	if (!(buff = (int *)ft_memalloc(sizeof(int) * (numbs->n + 10))))
 		exit(1);
 	buff = ft_intcpy(buff, numbs->a, numbs->n);
 	ft_quicksort(buff, 0, numbs->n - 1);
@@ -105,8 +105,6 @@ void			transformation(const int ac, char **av, t_info *numbs)
 		while (n_word > ++j)
 		{
 			buff[j] = ft_atoi(buffer[j]);
-			if (buff[j] >= MAX || buff[j] <= MIN)
-				ft_error();
 			free(buffer[j]);
 		}
 		free(buffer);

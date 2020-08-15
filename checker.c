@@ -6,11 +6,31 @@
 /*   By: hlikely <hlikely@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 13:13:43 by hlikely           #+#    #+#             */
-/*   Updated: 2020/08/10 17:19:48 by hlikely          ###   ########.fr       */
+/*   Updated: 2020/08/15 17:07:05 by hlikely          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./inc/push_swap.h"
+
+void	ft_null(t_info *numbs, t_stacks *res)
+{
+	numbs->unsorted = 0;
+	numbs->min = 0;
+	numbs->max = 0;
+	numbs->med = 0;
+	numbs->n = 0;
+	res->max = 0;
+	res->min = 0;
+	res->med = 0;
+	res->a = 0;
+	res->b = 0;
+	res->len_a = 0;
+	res->len_b = 0;
+	res->slen_a = 0;
+	res->slen_b = 0;
+	res->dest_a = 0;
+	res->dest_b = 0;
+}
 
 void			actions(char *line, t_stacks *res)
 {
@@ -92,6 +112,7 @@ int				main(int ac, char **av)
 		exit(1);
 	if (!(res = (t_stacks *)malloc(sizeof(t_stacks))))
 		exit(1);
+	ft_null(numbs, res);
 	if (validation(ac, av, numbs))
 	{
 		res->print_comm = 0;

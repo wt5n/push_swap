@@ -6,7 +6,7 @@
 /*   By: hlikely <hlikely@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 17:11:19 by hlikely           #+#    #+#             */
-/*   Updated: 2020/08/10 18:32:27 by hlikely          ###   ########.fr       */
+/*   Updated: 2020/08/15 15:20:18 by hlikely          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_stack		*init_stack(const int *stack, int n)
 	int		i;
 
 	i = 0;
-	if (!(a = (t_stack *)malloc(sizeof(t_stack))))
+	if (n == 0 || !(a = (t_stack *)malloc(sizeof(t_stack))))
 		exit(1);
 	b = a;
 	while (i < n)

@@ -78,5 +78,7 @@ void				best_pos_c(t_stacks *s, t_stack *b, int *act, int *buff);
 int					best_pos(t_stacks *s, t_stack *b, t_stacks *steps, int min);
 int					ft_count_to_min(t_stack *a, int min);
 void				free_stack(t_stacks *stacks);
+void				ft_null(t_info *numbs, t_stacks *res);
+
 
 #endif

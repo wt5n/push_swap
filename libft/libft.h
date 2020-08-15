@@ -18,8 +18,8 @@
 # include <unistd.h>
 # include <fcntl.h>
 
-# define MAX 2147483647
-# define MIN -2147483647
+# define MAXINT 2147483647
+# define MININT -2147483648
 # define BUFF_SIZE	8
 # define FD_SIZE	10240
 
