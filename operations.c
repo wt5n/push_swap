@@ -16,6 +16,8 @@ void		ft_sa(t_stack *a, int print_comm)
 {
 	int		c;
 
+	if (a == NULL || a->next == NULL)
+		return ;
 	c = a->value;
 	a->value = a->next->value;
 	a->next->value = c;
