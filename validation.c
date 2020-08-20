@@ -6,7 +6,7 @@
 /*   By: hlikely <hlikely@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 16:38:40 by hlikely           #+#    #+#             */
-/*   Updated: 2020/08/15 21:08:08 by hlikely          ###   ########.fr       */
+/*   Updated: 2020/08/20 22:13:31 by hlikely          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,22 @@ void			number_validation(const char *av)
 	}
 }
 
-int				spaces_check(int ac, const char *av)
+int				spaces_check(const char *av)
 {
 	int			i;
+	int			k;
 
+	k = 0;
 	i = 0;
-	while (i < ac)
+	if (ft_strlen(av) == 0)
+		ft_error();
+	while (av[k] != '\0')
+	{
+		if ((av[k] >= 97 && av[k] <= 122) || (av[k] >= 65 && av[k] <= 90))
+			ft_error();
+		k++;
+	}
+	while (av[i] != '\0')
 	{
 		if (av[i] == ' ' || av[i] == '\n' || av[i] == '\r' ||
 		av[i] == '\t' || av[i] == '\v' || av[i] == '\f')
@@ -54,6 +64,7 @@ int				spaces_check(int ac, const char *av)
 		else
 			return (1);
 	}
+	ft_error();
 	return (0);
 }
 
@@ -63,7 +74,7 @@ void			check_duplicate(t_info *numbs)
 	int			i;
 
 	i = 0;
-	if (!(buff = (int *)ft_memalloc(sizeof(int) * (numbs->n + 10))))
+	if (!numbs->n || !(buff = (int *)ft_memalloc(sizeof(int) * (numbs->n + 1))))
 		exit(1);
 	buff = ft_intcpy(buff, numbs->a, numbs->n);
 	ft_quicksort(buff, 0, numbs->n - 1);
@@ -122,7 +133,7 @@ int				validation(int ac, char **av, t_info *numbs)
 	ok = 0;
 	while (i < ac)
 	{
-		if (spaces_check(ac, av[i]))
+		if (spaces_check(av[i]))
 		{
 			number_validation(av[i]);
 			ok = 1;

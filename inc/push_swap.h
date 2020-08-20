@@ -6,7 +6,7 @@
 /*   By: hlikely <hlikely@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 17:06:18 by hlikely           #+#    #+#             */
-/*   Updated: 2020/08/11 17:03:57 by hlikely          ###   ########.fr       */
+/*   Updated: 2020/08/20 22:11:30 by hlikely          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ typedef struct		s_stacks
 	int				dest_b;
 }					t_stacks;
 
-int					spaces_check(int ac, const char *av);
+int					spaces_check(const char *av);
 t_stack				*init_stack(const int *stack, int n);
 void				initialize(t_info *numbs, t_stacks *res);
 void				to_info(t_info *numbs, int *buff, int n_word);
@@ -79,6 +79,5 @@ int					best_pos(t_stacks *s, t_stack *b, t_stacks *steps, int min);
 int					ft_count_to_min(t_stack *a, int min);
 void				free_stack(t_stacks *stacks);
 void				ft_null(t_info *numbs, t_stacks *res);
-
 
 #endif

@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hlikely <hlikely@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/10 16:48:27 by hlikely           #+#    #+#             */
-/*   Updated: 2020/08/19 16:54:27 by hlikely          ###   ########.fr       */
+/*   Created: 2019/09/18 18:22:36 by hlikely           #+#    #+#             */
+/*   Updated: 2019/09/18 18:22:38 by hlikely          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_swap(int *a, int *b)
-{
-	int c;
+#include "libft.h"
 
-	c = *a;
-	*a = *b;
-	*b = c;
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
+{
+	char *r;
+
+	if (!s || !(r = ft_memalloc(len + 1)))
+		return (NULL);
+	r = ft_strncpy(r, (char *)s + start, len);
+	return (r);
 }

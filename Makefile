@@ -8,7 +8,7 @@ SRC1 	= push_swap.c validation.c operations.c operations_2.c sorting.c sorting_2
 
 SRC2 	= checker.c validation.c operations.c operations_2.c init.c
 
-OBJSFD 	= temporary
+OBJSFD 	= tmp
 
 OBJS1 	= $(addprefix $(OBJSFD)/,$(SRC1:.c=.o))
 

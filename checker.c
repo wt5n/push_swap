@@ -6,13 +6,13 @@
 /*   By: hlikely <hlikely@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/10 13:13:43 by hlikely           #+#    #+#             */
-/*   Updated: 2020/08/15 17:07:05 by hlikely          ###   ########.fr       */
+/*   Updated: 2020/08/20 19:43:13 by hlikely          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./inc/push_swap.h"
 
-void	ft_null(t_info *numbs, t_stacks *res)
+void			ft_null(t_info *numbs, t_stacks *res)
 {
 	numbs->unsorted = 0;
 	numbs->min = 0;

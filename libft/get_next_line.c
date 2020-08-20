@@ -6,68 +6,70 @@
 /*   By: hlikely <hlikely@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/19 08:08:29 by hlikely           #+#    #+#             */
-/*   Updated: 2019/11/22 17:58:30 by hlikely          ###   ########.fr       */
+/*   Updated: 2020/08/20 22:15:36 by hlikely          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		read_line(char **st, char **line, const int fd)
+static int		finish(char **str, char **line)
 {
-	*line = ft_strdup(st[fd]);
-	free(st[fd]);
-	st[fd] = NULL;
-	return (1);
-}
-
-static int		read_file(char **st, const int fd)
-{
-	char		buf[BUFF_SIZE + 1];
-	int			r;
+	int			len;
 	char		*tmp;
 
-	tmp = NULL;
-	if ((r = read(fd, buf, BUFF_SIZE)) == 0)
-		return (0);
-	buf[r] = '\0';
-	tmp = ft_strjoin(st[fd], buf);
-	free(st[fd]);
-	st[fd] = ft_strdup(tmp);
-	free(tmp);
+	len = 0;
+	while ((*str)[len] != '\n' && (*str)[len] != '\0')
+		len++;
+	if ((*str)[len] == '\n')
+	{
+		*line = ft_strsub(*str, 0, len);
+		tmp = ft_strdup(&((*str)[len + 1]));
+		free(*str);
+		*str = NULL;
+		*str = tmp;
+		if ((*str)[0] == '\0')
+			ft_strdel(str);
+	}
+	else
+	{
+		*line = ft_strdup(*str);
+		ft_strdel(str);
+	}
 	return (1);
 }
 
-static void		last_4str(char **line, const int fd, char **st, char *tmp)
+static int		returns(char **str, char **line, int val, int fd)
 {
-	*line = ft_strdup(st[fd]);
-	free(st[fd]);
-	st[fd] = ft_strdup(tmp);
-	free(tmp);
+	if (val < 0)
+		return (-1);
+	else if (val == 0 && str[fd] == NULL)
+		return (0);
+	else
+		return (finish(&str[fd], line));
 }
 
 int				get_next_line(const int fd, char **line)
 {
-	char		buf[BUFF_SIZE + 1];
-	static char	*st[FD_SIZE];
+	int			val;
+	static char	*str[FD_SIZE];
+	char		buff[BUFF_SIZE + 1];
 	char		*tmp;
-	char		*p;
 
-	if (fd < 0 || line == NULL || read(fd, buf, 0) < 0)
+	if (fd < 0 || line == NULL)
 		return (-1);
-	if (!st[fd])
-		st[fd] = ft_strnew(0);
-	while ((p = ft_strchr(st[fd], '\n')) == NULL)
-		if ((read_file(st, fd)) == 0)
-			break ;
-	if (ft_strlen(st[fd]) != 0)
+	while ((val = read(fd, buff, BUFF_SIZE)) > 0)
 	{
-		if (!(ft_strchr(st[fd], '\n')))
-			return (read_line(st, &*line, fd));
-		*p = '\0';
-		tmp = ft_strdup(p + 1);
-		last_4str(line, fd, st, tmp);
+		buff[val] = '\0';
+		if (str[fd] == NULL)
+			str[fd] = ft_strdup(buff);
+		else
+		{
+			tmp = ft_strjoin(str[fd], buff);
+			free(str[fd]);
+			str[fd] = tmp;
+		}
+		if (ft_strchr(str[fd], '\n'))
+			break ;
 	}
-	else
-		return (0);
-	return (1);
+	return (returns(str, line, val, fd));
 }
