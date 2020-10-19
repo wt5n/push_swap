@@ -59,19 +59,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /snap/clion/129/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /snap/clion/129/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/hlikely/CLionProjects/push_swap/mygit
+CMAKE_SOURCE_DIR = /home/wtsn/projects/c/push_swap
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug
+CMAKE_BINARY_DIR = /home/wtsn/projects/c/push_swap/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,7 +79,7 @@ CMAKE_BINARY_DIR = /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debu
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/129/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -90,7 +90,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/129/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -100,14 +100,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug/CMakeFiles /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug/libft/CMakeFiles/progress.marks
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libft/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug/CMakeFiles 0
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/wtsn/projects/c/push_swap/cmake-build-debug/CMakeFiles /home/wtsn/projects/c/push_swap/cmake-build-debug/libft/CMakeFiles/progress.marks
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libft/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/wtsn/projects/c/push_swap/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libft/clean
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libft/clean
 .PHONY : clean
 
 # The main clean target
@@ -117,22 +117,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libft/preinstall
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libft/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libft/preinstall
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libft/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 libft/CMakeFiles/libft.dir/rule:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libft/CMakeFiles/libft.dir/rule
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libft/CMakeFiles/libft.dir/rule
 .PHONY : libft/CMakeFiles/libft.dir/rule
 
 # Convenience name for target.
@@ -142,7 +142,7 @@ libft: libft/CMakeFiles/libft.dir/rule
 
 # fast build rule for target.
 libft/fast:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/build
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/build
 .PHONY : libft/fast
 
 ft_atoi.o: ft_atoi.c.o
@@ -151,7 +151,7 @@ ft_atoi.o: ft_atoi.c.o
 
 # target to build an object file
 ft_atoi.c.o:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_atoi.c.o
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_atoi.c.o
 .PHONY : ft_atoi.c.o
 
 ft_atoi.i: ft_atoi.c.i
@@ -160,7 +160,7 @@ ft_atoi.i: ft_atoi.c.i
 
 # target to preprocess a source file
 ft_atoi.c.i:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_atoi.c.i
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_atoi.c.i
 .PHONY : ft_atoi.c.i
 
 ft_atoi.s: ft_atoi.c.s
@@ -169,7 +169,7 @@ ft_atoi.s: ft_atoi.c.s
 
 # target to generate assembly for a file
 ft_atoi.c.s:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_atoi.c.s
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_atoi.c.s
 .PHONY : ft_atoi.c.s
 
 ft_bzero.o: ft_bzero.c.o
@@ -178,7 +178,7 @@ ft_bzero.o: ft_bzero.c.o
 
 # target to build an object file
 ft_bzero.c.o:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_bzero.c.o
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_bzero.c.o
 .PHONY : ft_bzero.c.o
 
 ft_bzero.i: ft_bzero.c.i
@@ -187,7 +187,7 @@ ft_bzero.i: ft_bzero.c.i
 
 # target to preprocess a source file
 ft_bzero.c.i:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_bzero.c.i
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_bzero.c.i
 .PHONY : ft_bzero.c.i
 
 ft_bzero.s: ft_bzero.c.s
@@ -196,7 +196,7 @@ ft_bzero.s: ft_bzero.c.s
 
 # target to generate assembly for a file
 ft_bzero.c.s:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_bzero.c.s
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_bzero.c.s
 .PHONY : ft_bzero.c.s
 
 ft_error.o: ft_error.c.o
@@ -205,7 +205,7 @@ ft_error.o: ft_error.c.o
 
 # target to build an object file
 ft_error.c.o:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_error.c.o
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_error.c.o
 .PHONY : ft_error.c.o
 
 ft_error.i: ft_error.c.i
@@ -214,7 +214,7 @@ ft_error.i: ft_error.c.i
 
 # target to preprocess a source file
 ft_error.c.i:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_error.c.i
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_error.c.i
 .PHONY : ft_error.c.i
 
 ft_error.s: ft_error.c.s
@@ -223,7 +223,7 @@ ft_error.s: ft_error.c.s
 
 # target to generate assembly for a file
 ft_error.c.s:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_error.c.s
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_error.c.s
 .PHONY : ft_error.c.s
 
 ft_intcpy.o: ft_intcpy.c.o
@@ -232,7 +232,7 @@ ft_intcpy.o: ft_intcpy.c.o
 
 # target to build an object file
 ft_intcpy.c.o:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_intcpy.c.o
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_intcpy.c.o
 .PHONY : ft_intcpy.c.o
 
 ft_intcpy.i: ft_intcpy.c.i
@@ -241,7 +241,7 @@ ft_intcpy.i: ft_intcpy.c.i
 
 # target to preprocess a source file
 ft_intcpy.c.i:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_intcpy.c.i
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_intcpy.c.i
 .PHONY : ft_intcpy.c.i
 
 ft_intcpy.s: ft_intcpy.c.s
@@ -250,7 +250,7 @@ ft_intcpy.s: ft_intcpy.c.s
 
 # target to generate assembly for a file
 ft_intcpy.c.s:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_intcpy.c.s
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_intcpy.c.s
 .PHONY : ft_intcpy.c.s
 
 ft_memalloc.o: ft_memalloc.c.o
@@ -259,7 +259,7 @@ ft_memalloc.o: ft_memalloc.c.o
 
 # target to build an object file
 ft_memalloc.c.o:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_memalloc.c.o
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_memalloc.c.o
 .PHONY : ft_memalloc.c.o
 
 ft_memalloc.i: ft_memalloc.c.i
@@ -268,7 +268,7 @@ ft_memalloc.i: ft_memalloc.c.i
 
 # target to preprocess a source file
 ft_memalloc.c.i:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_memalloc.c.i
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_memalloc.c.i
 .PHONY : ft_memalloc.c.i
 
 ft_memalloc.s: ft_memalloc.c.s
@@ -277,8 +277,35 @@ ft_memalloc.s: ft_memalloc.c.s
 
 # target to generate assembly for a file
 ft_memalloc.c.s:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_memalloc.c.s
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_memalloc.c.s
 .PHONY : ft_memalloc.c.s
+
+ft_memdel.o: ft_memdel.c.o
+
+.PHONY : ft_memdel.o
+
+# target to build an object file
+ft_memdel.c.o:
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_memdel.c.o
+.PHONY : ft_memdel.c.o
+
+ft_memdel.i: ft_memdel.c.i
+
+.PHONY : ft_memdel.i
+
+# target to preprocess a source file
+ft_memdel.c.i:
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_memdel.c.i
+.PHONY : ft_memdel.c.i
+
+ft_memdel.s: ft_memdel.c.s
+
+.PHONY : ft_memdel.s
+
+# target to generate assembly for a file
+ft_memdel.c.s:
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_memdel.c.s
+.PHONY : ft_memdel.c.s
 
 ft_quicksort.o: ft_quicksort.c.o
 
@@ -286,7 +313,7 @@ ft_quicksort.o: ft_quicksort.c.o
 
 # target to build an object file
 ft_quicksort.c.o:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_quicksort.c.o
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_quicksort.c.o
 .PHONY : ft_quicksort.c.o
 
 ft_quicksort.i: ft_quicksort.c.i
@@ -295,7 +322,7 @@ ft_quicksort.i: ft_quicksort.c.i
 
 # target to preprocess a source file
 ft_quicksort.c.i:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_quicksort.c.i
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_quicksort.c.i
 .PHONY : ft_quicksort.c.i
 
 ft_quicksort.s: ft_quicksort.c.s
@@ -304,7 +331,7 @@ ft_quicksort.s: ft_quicksort.c.s
 
 # target to generate assembly for a file
 ft_quicksort.c.s:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_quicksort.c.s
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_quicksort.c.s
 .PHONY : ft_quicksort.c.s
 
 ft_strchr.o: ft_strchr.c.o
@@ -313,7 +340,7 @@ ft_strchr.o: ft_strchr.c.o
 
 # target to build an object file
 ft_strchr.c.o:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strchr.c.o
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strchr.c.o
 .PHONY : ft_strchr.c.o
 
 ft_strchr.i: ft_strchr.c.i
@@ -322,7 +349,7 @@ ft_strchr.i: ft_strchr.c.i
 
 # target to preprocess a source file
 ft_strchr.c.i:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strchr.c.i
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strchr.c.i
 .PHONY : ft_strchr.c.i
 
 ft_strchr.s: ft_strchr.c.s
@@ -331,7 +358,7 @@ ft_strchr.s: ft_strchr.c.s
 
 # target to generate assembly for a file
 ft_strchr.c.s:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strchr.c.s
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strchr.c.s
 .PHONY : ft_strchr.c.s
 
 ft_strcmp.o: ft_strcmp.c.o
@@ -340,7 +367,7 @@ ft_strcmp.o: ft_strcmp.c.o
 
 # target to build an object file
 ft_strcmp.c.o:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strcmp.c.o
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strcmp.c.o
 .PHONY : ft_strcmp.c.o
 
 ft_strcmp.i: ft_strcmp.c.i
@@ -349,7 +376,7 @@ ft_strcmp.i: ft_strcmp.c.i
 
 # target to preprocess a source file
 ft_strcmp.c.i:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strcmp.c.i
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strcmp.c.i
 .PHONY : ft_strcmp.c.i
 
 ft_strcmp.s: ft_strcmp.c.s
@@ -358,8 +385,35 @@ ft_strcmp.s: ft_strcmp.c.s
 
 # target to generate assembly for a file
 ft_strcmp.c.s:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strcmp.c.s
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strcmp.c.s
 .PHONY : ft_strcmp.c.s
+
+ft_strdel.o: ft_strdel.c.o
+
+.PHONY : ft_strdel.o
+
+# target to build an object file
+ft_strdel.c.o:
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strdel.c.o
+.PHONY : ft_strdel.c.o
+
+ft_strdel.i: ft_strdel.c.i
+
+.PHONY : ft_strdel.i
+
+# target to preprocess a source file
+ft_strdel.c.i:
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strdel.c.i
+.PHONY : ft_strdel.c.i
+
+ft_strdel.s: ft_strdel.c.s
+
+.PHONY : ft_strdel.s
+
+# target to generate assembly for a file
+ft_strdel.c.s:
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strdel.c.s
+.PHONY : ft_strdel.c.s
 
 ft_strdup.o: ft_strdup.c.o
 
@@ -367,7 +421,7 @@ ft_strdup.o: ft_strdup.c.o
 
 # target to build an object file
 ft_strdup.c.o:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strdup.c.o
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strdup.c.o
 .PHONY : ft_strdup.c.o
 
 ft_strdup.i: ft_strdup.c.i
@@ -376,7 +430,7 @@ ft_strdup.i: ft_strdup.c.i
 
 # target to preprocess a source file
 ft_strdup.c.i:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strdup.c.i
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strdup.c.i
 .PHONY : ft_strdup.c.i
 
 ft_strdup.s: ft_strdup.c.s
@@ -385,7 +439,7 @@ ft_strdup.s: ft_strdup.c.s
 
 # target to generate assembly for a file
 ft_strdup.c.s:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strdup.c.s
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strdup.c.s
 .PHONY : ft_strdup.c.s
 
 ft_strjoin.o: ft_strjoin.c.o
@@ -394,7 +448,7 @@ ft_strjoin.o: ft_strjoin.c.o
 
 # target to build an object file
 ft_strjoin.c.o:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strjoin.c.o
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strjoin.c.o
 .PHONY : ft_strjoin.c.o
 
 ft_strjoin.i: ft_strjoin.c.i
@@ -403,7 +457,7 @@ ft_strjoin.i: ft_strjoin.c.i
 
 # target to preprocess a source file
 ft_strjoin.c.i:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strjoin.c.i
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strjoin.c.i
 .PHONY : ft_strjoin.c.i
 
 ft_strjoin.s: ft_strjoin.c.s
@@ -412,7 +466,7 @@ ft_strjoin.s: ft_strjoin.c.s
 
 # target to generate assembly for a file
 ft_strjoin.c.s:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strjoin.c.s
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strjoin.c.s
 .PHONY : ft_strjoin.c.s
 
 ft_strlen.o: ft_strlen.c.o
@@ -421,7 +475,7 @@ ft_strlen.o: ft_strlen.c.o
 
 # target to build an object file
 ft_strlen.c.o:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strlen.c.o
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strlen.c.o
 .PHONY : ft_strlen.c.o
 
 ft_strlen.i: ft_strlen.c.i
@@ -430,7 +484,7 @@ ft_strlen.i: ft_strlen.c.i
 
 # target to preprocess a source file
 ft_strlen.c.i:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strlen.c.i
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strlen.c.i
 .PHONY : ft_strlen.c.i
 
 ft_strlen.s: ft_strlen.c.s
@@ -439,8 +493,35 @@ ft_strlen.s: ft_strlen.c.s
 
 # target to generate assembly for a file
 ft_strlen.c.s:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strlen.c.s
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strlen.c.s
 .PHONY : ft_strlen.c.s
+
+ft_strncpy.o: ft_strncpy.c.o
+
+.PHONY : ft_strncpy.o
+
+# target to build an object file
+ft_strncpy.c.o:
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strncpy.c.o
+.PHONY : ft_strncpy.c.o
+
+ft_strncpy.i: ft_strncpy.c.i
+
+.PHONY : ft_strncpy.i
+
+# target to preprocess a source file
+ft_strncpy.c.i:
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strncpy.c.i
+.PHONY : ft_strncpy.c.i
+
+ft_strncpy.s: ft_strncpy.c.s
+
+.PHONY : ft_strncpy.s
+
+# target to generate assembly for a file
+ft_strncpy.c.s:
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strncpy.c.s
+.PHONY : ft_strncpy.c.s
 
 ft_strnew.o: ft_strnew.c.o
 
@@ -448,7 +529,7 @@ ft_strnew.o: ft_strnew.c.o
 
 # target to build an object file
 ft_strnew.c.o:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strnew.c.o
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strnew.c.o
 .PHONY : ft_strnew.c.o
 
 ft_strnew.i: ft_strnew.c.i
@@ -457,7 +538,7 @@ ft_strnew.i: ft_strnew.c.i
 
 # target to preprocess a source file
 ft_strnew.c.i:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strnew.c.i
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strnew.c.i
 .PHONY : ft_strnew.c.i
 
 ft_strnew.s: ft_strnew.c.s
@@ -466,7 +547,7 @@ ft_strnew.s: ft_strnew.c.s
 
 # target to generate assembly for a file
 ft_strnew.c.s:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strnew.c.s
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strnew.c.s
 .PHONY : ft_strnew.c.s
 
 ft_strsplit.o: ft_strsplit.c.o
@@ -475,7 +556,7 @@ ft_strsplit.o: ft_strsplit.c.o
 
 # target to build an object file
 ft_strsplit.c.o:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strsplit.c.o
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strsplit.c.o
 .PHONY : ft_strsplit.c.o
 
 ft_strsplit.i: ft_strsplit.c.i
@@ -484,7 +565,7 @@ ft_strsplit.i: ft_strsplit.c.i
 
 # target to preprocess a source file
 ft_strsplit.c.i:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strsplit.c.i
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strsplit.c.i
 .PHONY : ft_strsplit.c.i
 
 ft_strsplit.s: ft_strsplit.c.s
@@ -493,8 +574,35 @@ ft_strsplit.s: ft_strsplit.c.s
 
 # target to generate assembly for a file
 ft_strsplit.c.s:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strsplit.c.s
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strsplit.c.s
 .PHONY : ft_strsplit.c.s
+
+ft_strsub.o: ft_strsub.c.o
+
+.PHONY : ft_strsub.o
+
+# target to build an object file
+ft_strsub.c.o:
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strsub.c.o
+.PHONY : ft_strsub.c.o
+
+ft_strsub.i: ft_strsub.c.i
+
+.PHONY : ft_strsub.i
+
+# target to preprocess a source file
+ft_strsub.c.i:
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strsub.c.i
+.PHONY : ft_strsub.c.i
+
+ft_strsub.s: ft_strsub.c.s
+
+.PHONY : ft_strsub.s
+
+# target to generate assembly for a file
+ft_strsub.c.s:
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_strsub.c.s
+.PHONY : ft_strsub.c.s
 
 ft_swap.o: ft_swap.c.o
 
@@ -502,7 +610,7 @@ ft_swap.o: ft_swap.c.o
 
 # target to build an object file
 ft_swap.c.o:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_swap.c.o
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_swap.c.o
 .PHONY : ft_swap.c.o
 
 ft_swap.i: ft_swap.c.i
@@ -511,7 +619,7 @@ ft_swap.i: ft_swap.c.i
 
 # target to preprocess a source file
 ft_swap.c.i:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_swap.c.i
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_swap.c.i
 .PHONY : ft_swap.c.i
 
 ft_swap.s: ft_swap.c.s
@@ -520,7 +628,7 @@ ft_swap.s: ft_swap.c.s
 
 # target to generate assembly for a file
 ft_swap.c.s:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_swap.c.s
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/ft_swap.c.s
 .PHONY : ft_swap.c.s
 
 get_next_line.o: get_next_line.c.o
@@ -529,7 +637,7 @@ get_next_line.o: get_next_line.c.o
 
 # target to build an object file
 get_next_line.c.o:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/get_next_line.c.o
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/get_next_line.c.o
 .PHONY : get_next_line.c.o
 
 get_next_line.i: get_next_line.c.i
@@ -538,7 +646,7 @@ get_next_line.i: get_next_line.c.i
 
 # target to preprocess a source file
 get_next_line.c.i:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/get_next_line.c.i
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/get_next_line.c.i
 .PHONY : get_next_line.c.i
 
 get_next_line.s: get_next_line.c.s
@@ -547,7 +655,7 @@ get_next_line.s: get_next_line.c.s
 
 # target to generate assembly for a file
 get_next_line.c.s:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/get_next_line.c.s
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(MAKE) $(MAKESILENT) -f libft/CMakeFiles/libft.dir/build.make libft/CMakeFiles/libft.dir/get_next_line.c.s
 .PHONY : get_next_line.c.s
 
 # Help Target
@@ -574,6 +682,9 @@ help:
 	@echo "... ft_memalloc.o"
 	@echo "... ft_memalloc.i"
 	@echo "... ft_memalloc.s"
+	@echo "... ft_memdel.o"
+	@echo "... ft_memdel.i"
+	@echo "... ft_memdel.s"
 	@echo "... ft_quicksort.o"
 	@echo "... ft_quicksort.i"
 	@echo "... ft_quicksort.s"
@@ -583,6 +694,9 @@ help:
 	@echo "... ft_strcmp.o"
 	@echo "... ft_strcmp.i"
 	@echo "... ft_strcmp.s"
+	@echo "... ft_strdel.o"
+	@echo "... ft_strdel.i"
+	@echo "... ft_strdel.s"
 	@echo "... ft_strdup.o"
 	@echo "... ft_strdup.i"
 	@echo "... ft_strdup.s"
@@ -592,12 +706,18 @@ help:
 	@echo "... ft_strlen.o"
 	@echo "... ft_strlen.i"
 	@echo "... ft_strlen.s"
+	@echo "... ft_strncpy.o"
+	@echo "... ft_strncpy.i"
+	@echo "... ft_strncpy.s"
 	@echo "... ft_strnew.o"
 	@echo "... ft_strnew.i"
 	@echo "... ft_strnew.s"
 	@echo "... ft_strsplit.o"
 	@echo "... ft_strsplit.i"
 	@echo "... ft_strsplit.s"
+	@echo "... ft_strsub.o"
+	@echo "... ft_strsub.i"
+	@echo "... ft_strsub.s"
 	@echo "... ft_swap.o"
 	@echo "... ft_swap.i"
 	@echo "... ft_swap.s"
@@ -615,6 +735,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/wtsn/projects/c/push_swap/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

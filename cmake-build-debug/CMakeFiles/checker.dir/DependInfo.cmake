@@ -4,15 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/hlikely/CLionProjects/push_swap/mygit/checker.c" "/Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug/CMakeFiles/checker.dir/checker.c.o"
-  "/Users/hlikely/CLionProjects/push_swap/mygit/init.c" "/Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug/CMakeFiles/checker.dir/init.c.o"
-  "/Users/hlikely/CLionProjects/push_swap/mygit/operations.c" "/Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug/CMakeFiles/checker.dir/operations.c.o"
-  "/Users/hlikely/CLionProjects/push_swap/mygit/operations_2.c" "/Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug/CMakeFiles/checker.dir/operations_2.c.o"
-  "/Users/hlikely/CLionProjects/push_swap/mygit/sorting.c" "/Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug/CMakeFiles/checker.dir/sorting.c.o"
-  "/Users/hlikely/CLionProjects/push_swap/mygit/sorting_2.c" "/Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug/CMakeFiles/checker.dir/sorting_2.c.o"
-  "/Users/hlikely/CLionProjects/push_swap/mygit/validation.c" "/Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug/CMakeFiles/checker.dir/validation.c.o"
+  "/home/wtsn/projects/c/push_swap/checker.c" "/home/wtsn/projects/c/push_swap/cmake-build-debug/CMakeFiles/checker.dir/checker.c.o"
+  "/home/wtsn/projects/c/push_swap/init.c" "/home/wtsn/projects/c/push_swap/cmake-build-debug/CMakeFiles/checker.dir/init.c.o"
+  "/home/wtsn/projects/c/push_swap/operations.c" "/home/wtsn/projects/c/push_swap/cmake-build-debug/CMakeFiles/checker.dir/operations.c.o"
+  "/home/wtsn/projects/c/push_swap/operations_2.c" "/home/wtsn/projects/c/push_swap/cmake-build-debug/CMakeFiles/checker.dir/operations_2.c.o"
+  "/home/wtsn/projects/c/push_swap/sorting.c" "/home/wtsn/projects/c/push_swap/cmake-build-debug/CMakeFiles/checker.dir/sorting.c.o"
+  "/home/wtsn/projects/c/push_swap/sorting_2.c" "/home/wtsn/projects/c/push_swap/cmake-build-debug/CMakeFiles/checker.dir/sorting_2.c.o"
+  "/home/wtsn/projects/c/push_swap/validation.c" "/home/wtsn/projects/c/push_swap/cmake-build-debug/CMakeFiles/checker.dir/validation.c.o"
   )
-set(CMAKE_C_COMPILER_ID "AppleClang")
+set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
@@ -21,7 +21,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/Users/hlikely/CLionProjects/push_swap/mygit/cmake-build-debug/libft/CMakeFiles/libft.dir/DependInfo.cmake"
+  "/home/wtsn/projects/c/push_swap/cmake-build-debug/libft/CMakeFiles/libft.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

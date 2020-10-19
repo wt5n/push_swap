@@ -78,12 +78,14 @@ void			check_duplicate(t_info *numbs)
 		exit(1);
 	buff = ft_intcpy(buff, numbs->a, numbs->n);
 	ft_quicksort(buff, 0, numbs->n - 1);
-	while (i != numbs->n)
+    if (numbs->n > 1)
 	{
-		if (buff[i] == buff[i + 1])
-			ft_error();
-		i++;
-	}
+        while (i != numbs->n) {
+            if (buff[i] == buff[i + 1])
+                ft_error();
+            i++;
+        }
+    }
 	i = 0;
 	while (i < (numbs->n - 1))
 	{

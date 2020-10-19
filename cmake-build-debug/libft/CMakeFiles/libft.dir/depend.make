@@ -15,6 +15,9 @@ libft/CMakeFiles/libft.dir/ft_intcpy.c.o: ../libft/ft_intcpy.c
 libft/CMakeFiles/libft.dir/ft_memalloc.c.o: ../libft/ft_memalloc.c
 libft/CMakeFiles/libft.dir/ft_memalloc.c.o: ../libft/libft.h
 
+libft/CMakeFiles/libft.dir/ft_memdel.c.o: ../libft/ft_memdel.c
+libft/CMakeFiles/libft.dir/ft_memdel.c.o: ../libft/libft.h
+
 libft/CMakeFiles/libft.dir/ft_quicksort.c.o: ../libft/ft_quicksort.c
 libft/CMakeFiles/libft.dir/ft_quicksort.c.o: ../libft/libft.h
 
@@ -23,6 +26,9 @@ libft/CMakeFiles/libft.dir/ft_strchr.c.o: ../libft/libft.h
 
 libft/CMakeFiles/libft.dir/ft_strcmp.c.o: ../libft/ft_strcmp.c
 libft/CMakeFiles/libft.dir/ft_strcmp.c.o: ../libft/libft.h
+
+libft/CMakeFiles/libft.dir/ft_strdel.c.o: ../libft/ft_strdel.c
+libft/CMakeFiles/libft.dir/ft_strdel.c.o: ../libft/libft.h
 
 libft/CMakeFiles/libft.dir/ft_strdup.c.o: ../libft/ft_strdup.c
 libft/CMakeFiles/libft.dir/ft_strdup.c.o: ../libft/libft.h
@@ -33,11 +39,17 @@ libft/CMakeFiles/libft.dir/ft_strjoin.c.o: ../libft/libft.h
 libft/CMakeFiles/libft.dir/ft_strlen.c.o: ../libft/ft_strlen.c
 libft/CMakeFiles/libft.dir/ft_strlen.c.o: ../libft/libft.h
 
+libft/CMakeFiles/libft.dir/ft_strncpy.c.o: ../libft/ft_strncpy.c
+libft/CMakeFiles/libft.dir/ft_strncpy.c.o: ../libft/libft.h
+
 libft/CMakeFiles/libft.dir/ft_strnew.c.o: ../libft/ft_strnew.c
 libft/CMakeFiles/libft.dir/ft_strnew.c.o: ../libft/libft.h
 
 libft/CMakeFiles/libft.dir/ft_strsplit.c.o: ../libft/ft_strsplit.c
 libft/CMakeFiles/libft.dir/ft_strsplit.c.o: ../libft/libft.h
+
+libft/CMakeFiles/libft.dir/ft_strsub.c.o: ../libft/ft_strsub.c
+libft/CMakeFiles/libft.dir/ft_strsub.c.o: ../libft/libft.h
 
 libft/CMakeFiles/libft.dir/ft_swap.c.o: ../libft/ft_swap.c
 

@@ -6,7 +6,7 @@ CFLAGS 	= -Wall -Wextra -Werror
 
 SRC1 	= push_swap.c validation.c operations.c operations_2.c sorting.c sorting_2.c init.c
 
-SRC2 	= checker.c validation.c operations.c operations_2.c init.c
+SRC2 	= checker.c validation.c operations.c operations_2.c init.c sorting_2.c
 
 OBJSFD 	= tmp
 
@@ -28,7 +28,7 @@ all: $(LIBFT) ./libft/libft.a $(NAME1) $(NAME2)
 LIBFT		= ./libft/libft.a
 
 $(LIBFT):
-			make -C ./libft
+	make -C ./libft
 
 $(OBJSFD):
 	mkdir $@

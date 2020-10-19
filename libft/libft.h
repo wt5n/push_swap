@@ -37,11 +37,11 @@ size_t				ft_strlen(const char *str);
 char				*ft_strnew(size_t size);
 char				**ft_strsplit_str(char const *s, int word);
 void				ft_swap(int *a, int *b);
-int					get_next_line(const int fd, char **line);
-int					ft_words(char const *s);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strncpy(char *dst, const char *src, size_t len);
 void				ft_strdel(char **as);
 void				ft_memdel(void **ap);
+int					get_next_line(const int fd, char **line);
+int					ft_words(char const *s);
 
 #endif

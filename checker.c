@@ -12,26 +12,6 @@
 
 #include "./inc/push_swap.h"
 
-void			ft_null(t_info *numbs, t_stacks *res)
-{
-	numbs->unsorted = 0;
-	numbs->min = 0;
-	numbs->max = 0;
-	numbs->med = 0;
-	numbs->n = 0;
-	res->max = 0;
-	res->min = 0;
-	res->med = 0;
-	res->a = 0;
-	res->b = 0;
-	res->len_a = 0;
-	res->len_b = 0;
-	res->slen_a = 0;
-	res->slen_b = 0;
-	res->dest_a = 0;
-	res->dest_b = 0;
-}
-
 void			actions(char *line, t_stacks *res)
 {
 	if (ft_strcmp(line, "sa") == 0)

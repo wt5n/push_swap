@@ -6,15 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/Users/hlikely/CLionProjects/push_swap/mygit/checker.c
+/home/wtsn/projects/c/push_swap/checker.c
 ./inc/push_swap.h
-/Users/hlikely/CLionProjects/push_swap/mygit/inc/push_swap.h
+/home/wtsn/projects/c/push_swap/inc/push_swap.h
 
-/Users/hlikely/CLionProjects/push_swap/mygit/inc/push_swap.h
+/home/wtsn/projects/c/push_swap/inc/push_swap.h
 ../libft/libft.h
-/Users/hlikely/CLionProjects/push_swap/mygit/libft/libft.h
+/home/wtsn/projects/c/push_swap/libft/libft.h
 
-/Users/hlikely/CLionProjects/push_swap/mygit/libft/libft.h
+/home/wtsn/projects/c/push_swap/init.c
+./inc/push_swap.h
+/home/wtsn/projects/c/push_swap/inc/push_swap.h
+
+/home/wtsn/projects/c/push_swap/libft/libft.h
 string.h
 -
 stdio.h
@@ -25,4 +29,24 @@ unistd.h
 -
 fcntl.h
 -
+
+/home/wtsn/projects/c/push_swap/operations.c
+./inc/push_swap.h
+/home/wtsn/projects/c/push_swap/inc/push_swap.h
+
+/home/wtsn/projects/c/push_swap/operations_2.c
+./inc/push_swap.h
+/home/wtsn/projects/c/push_swap/inc/push_swap.h
+
+/home/wtsn/projects/c/push_swap/sorting.c
+./inc/push_swap.h
+/home/wtsn/projects/c/push_swap/inc/push_swap.h
+
+/home/wtsn/projects/c/push_swap/sorting_2.c
+./inc/push_swap.h
+/home/wtsn/projects/c/push_swap/inc/push_swap.h
+
+/home/wtsn/projects/c/push_swap/validation.c
+./inc/push_swap.h
+/home/wtsn/projects/c/push_swap/inc/push_swap.h
 
